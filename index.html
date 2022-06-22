@@ -6,32 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto contador</title>
   <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <script defer src="./javascript.js"></script>
 </head>
 <body>
   <main>
-    <h1>Semáforo Deportivo</h1>
+    <h1>Semáforo Baloncesto</h1>
     <div class="semaforo">
       <div class="panel">
         <h2>Home</h2>
-        <div class="display-num">
+        <div id="display-home" class="display-num">
           <p>0</p>
         </div>
         <div>
-          <button class="btn-puntos">+ 1</button>
-          <button class="btn-puntos">+ 2</button>
-          <button class="btn-puntos">+ 3</button>
+          <button id="home-puntos-1" class="btn-puntos">+ 1</button>
+          <button id="home-puntos-2" class="btn-puntos">+ 2</button>
+          <button id="home-puntos-3" class="btn-puntos">+ 3</button>
         </div>
       </div>
       <div class="panel">
         <h2>Guest</h2>
-        <div class="display-num">
+        <div id="display-guest" class="display-num">
           <p>0</p>
         </div>
         <div>
-          <button class="btn-puntos">+ 1</button>
-          <button class="btn-puntos">+ 2</button>
-          <button class="btn-puntos">+ 3</button>
+          <button id="guest-puntos-1" class="btn-puntos">+ 1</button>
+          <button id="guest-puntos-2" class="btn-puntos">+ 2</button>
+          <button id="guest-puntos-3" class="btn-puntos">+ 3</button>
         </div>
       </div>
     </div>
