@@ -50,7 +50,17 @@ h2 {
   width: 100%;
   text-align: right;
 }
+.verde {
+  color: rgb(0, 255, 0);
+}
+.rojo {
+  color: rgb(255, 0, 0);
+}
+.amarillo {
+  color: rgb(255, 255, 0);
+}
 .btn-puntos {
+  cursor: pointer;
   font-family: 'digital';
   font-size: 1rem;
   background-color: transparent;
@@ -64,6 +74,7 @@ h2 {
   padding-inline: 0.5rem;
 }
 .btn-start {
+  cursor: pointer;
   font-family: inherit;
   font-weight: bold;
   background-color: transparent;
