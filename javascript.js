@@ -12,6 +12,8 @@ const guestPuntos1 = document.querySelector('#guest-puntos-1')
 const guestPuntos2 = document.querySelector('#guest-puntos-2')
 const guestPuntos3 = document.querySelector('#guest-puntos-3')
 
+const displayTime = document.querySelector('#display-time')
+
 const btnStart = document.querySelector('#btn-start')
 
 let puntosHome = 0
@@ -80,9 +82,39 @@ function colorGanador() {
   }
 }
 
-btnStart.addEventListener('click', function() {
+function elReloj() {
+  btnStart.removeEventListener('click', startGame)
+  let losSegundos = 120
+
+  const temporizador = setInterval( function() {
+    const minutos = Math.floor(losSegundos / 60)
+    const segundos = losSegundos % 60
+   
+    const min = minutos < 10 ? '0' + minutos : minutos
+    const seg = segundos < 10 ? '0' + segundos : segundos
+      
+
+    displayTime.innerHTML = `
+    ${min}:${seg}
+    `
+    losSegundos--
+
+    if(losSegundos < 0) {
+      clearInterval(temporizador)
+      btnStart.addEventListener('click', startGame)
+    }
+
+  }, 1000)
+}
+
+function startGame() {
   puntosHome = 0
   puntosGuest = 0
   renderHomeDisplay(puntosHome)
   renderGuestDisplay(puntosGuest)
-})
+  elReloj()
+}
+
+
+
+btnStart.addEventListener('click', startGame)
