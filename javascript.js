@@ -3,7 +3,7 @@ const nombreGuest = document.querySelector('#nombre-guest')
 
 const displayHome = document.querySelector('#display-home')
 const displayGuest = document.querySelector('#display-guest')
-
+ 
 const homePuntos1 = document.querySelector('#home-puntos-1')
 const homePuntos2 = document.querySelector('#home-puntos-2')
 const homePuntos3 = document.querySelector('#home-puntos-3')
